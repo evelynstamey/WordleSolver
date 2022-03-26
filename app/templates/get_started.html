@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Evelyn's Wordle Solver</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+        <form class="main" action="{{ url_for('main') }}" method="post">
+          <label class="bar"><input type="submit" value="GET STARTED" name="submit-button"></label>
+        </form>
+  </body>
+</html>
