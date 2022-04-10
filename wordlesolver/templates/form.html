@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Evelyn's Wordle Solver</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+        <form class="main" action="{{ url_for('main') }}" method="post">
+          <!-- Letter inputs -->
+          <label class="container-text" for="cell-0">
+            <input type="text" id="cell-0" name="cell-0" maxlength="1" value="{{ default_0 }}">
+          </label>
+          <label class="container-text" for="cell-1">
+            <input type="text" id="cell-1" name="cell-1" maxlength="1" value="{{ default_1 }}">
+          </label>
+          <label class="container-text" for="cell-2">
+            <input type="text" id="cell-2" name="cell-2" maxlength="1" value="{{ default_2 }}">
+          </label>
+          <label class="container-text" for="cell-3">
+            <input type="text" id="cell-3" name="cell-3" maxlength="1" value="{{ default_3 }}">
+          </label>
+          <label class="container-text" for="cell-4">
+            <input type="text" id="cell-4" name="cell-4" maxlength="1" value="{{ default_4 }}">
+          </label>
+          <br>
+          <!-- Clue color inputs -->
+          {% for i in letter_index %}
+              <label class="container-check" for="grey-{{ i }}">
+                <input type="radio" id="grey-{{ i }}" name="group-{{ i }}" value="grey">
+                <span class="checkmark" id="grey"></span>
+              </label>
+              <label class="container-check" for="yellow-{{ i }}">
+                <input type="radio" id="yellow-{{ i }}" name="group-{{ i }}" value="yellow">
+                <span class="checkmark" id="yellow"></span>
+              </label>
+              <label class="container-check" for="green-{{ i }}">
+                <input type="radio" id="green-{{ i }}" name="group-{{ i }}" value="green">
+                <span class="checkmark" id="green"></span>
+              </label>
+              <label class="container-check-space"></label>
+          {% endfor %}
+          <br>
+          <label class="bar"><input type="submit" value="NEXT GUESS" name="submit-button"></label>
+          <label class="container-check-space2"></label>
+          <label class="bar2"><input type="submit" value="SOLVED!" name="submit-button"></label>
+          <label class="bar2"><input type="submit" value="PLAY AGAIN" name="submit-button"></label>
+        </form>
+
+  </body>
+</html>

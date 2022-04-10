@@ -7,4 +7,5 @@ setup(
     author="Evelyn Stamey",
     author_email="estamey21@gmail.com",
     packages=find_packages(),
+    python_requires=">=3.7, <3.8",
 )

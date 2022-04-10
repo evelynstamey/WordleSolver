@@ -3,3 +3,5 @@ __pycache__
 bug_report.txt
 TODO.txt
 Dockerfile
+docker-compose.yml
+notes.txt
